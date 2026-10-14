@@ -17,8 +17,24 @@ def return_card(manager, request_id):
 def run_menu(manager=None, path='data/requests.json', input_fn=input, output_fn=print):
     manager = manager if manager is not None else RequestManager()
     while True:
-        output_fn('\n1 Create  2 View  3 Approve  4 Issue  5 Return')
-        output_fn('6 List    7 Save  8 Load     9 Quit')
+        output_fn("\n" + "=" * 50)
+        output_fn("           CAMPUS ACCESS MANAGER")
+        output_fn("=" * 50)
+        output_fn("  REQUEST MANAGEMENT")
+        output_fn("  [1] Create Request")
+        output_fn("  [2] View Request")
+        output_fn("  [3] Approve Request")
+        output_fn("")
+        output_fn("  CARD MANAGEMENT")
+        output_fn("  [4] Issue Card")
+        output_fn("  [5] Return Card")
+        output_fn("  [6] List All Requests")
+        output_fn("")
+        output_fn("  DATA MANAGEMENT")
+        output_fn("  [7] Save Records")
+        output_fn("  [8] Load Records")
+        output_fn("  [9] Exit")
+        output_fn("=" * 50)
         try:
             choice = input_fn('Choice: ').strip()
             if choice == '1':
